@@ -1,0 +1,21 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build and deploy
+      run: |
+        # No build step needed for a simple HTML site
+        # Deploy your website to a web server or hosting service
+        # For example, using GitHub Pages:
+        git push origin main
